@@ -1,0 +1,24 @@
+{% extends "menu.html" %}
+
+{% block css %}
+<link href="static/pages/find_gigs/css/find_gigs.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="background">
+    <div class="backgroundFilter"></div>
+</div>
+<div class="eventListContainer">
+    <div class="eventList">
+        <div class="scrollWindow">
+            <div class="scrollContent"></div>
+        </div>
+    </div>
+</div>
+<div class="pageTitle">Find Gigs</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/pages/find_gigs/javascript/entrance_pop.js"></script>
+<script type="text/javascript" src="/static/pages/find_gigs/javascript/fetch_events.js"></script>
+{% endblock %}

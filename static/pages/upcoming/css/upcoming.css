@@ -1,0 +1,345 @@
+.background
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:  url("../images/shadowy-gig.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+.backgroundFilter
+{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgb(1, 1, 1, 0) 20%, rgb(38, 38, 38, 0.4) 100%);
+}
+
+
+.pageTitle
+{
+    position: absolute;
+    width: 100vw;
+    color: #ffd11a; /*#ff9500;*/
+    font-family: pop;
+    font-size: 8vw;
+    text-align: center;
+    margin-top: 20vw;
+    transition: font-size 1s, transform 1.5s 1s;
+}
+
+
+.eventListContainer
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+}
+
+
+.eventList
+{
+    margin-top: 100vh;
+    width: 80vw;
+    height: 70vh;
+    background: rgb(26, 26, 26, 0.9);
+    border-top-left-radius: 8vw;
+    border-top-right-radius: 8vw;
+    transition: transform 1.5s 0.2s;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.scrollWindow
+{
+    height: 60vh;
+    width: 90%;
+    margin-top: 10vh;
+    overflow-y: scroll;
+}
+
+
+.scrollWindow::-webkit-scrollbar
+{
+    width: 0;
+}
+
+
+.scrollContent
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+}
+
+
+.dateSpacer
+{
+    width: 100%;
+    height: 5vh;
+    color: #ff9500;
+    font-family: pop;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+.eventRow
+{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    margin-bottom: 3.5vh;
+    width: 100%;
+    height: 25vh;
+    justify-content: center;
+}
+
+
+.event
+{
+    width: 90%;
+    height: 100%;
+    background: rgb(50, 50, 50, 0.4);
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    overflow: hidden;
+    box-shadow: 0 0 1vw transparent;
+    animation: boxUnglow 0.2s ease-in-out;
+}
+
+.event:hover
+{
+    box-shadow: 0 0 1vw rgb(100, 100, 100);
+    animation: boxGlow 0.4s ease-in-out;
+}
+
+.event > div
+{
+    margin: 2%;
+    overflow: hidden;
+}
+
+
+@keyframes boxGlow
+{
+    from
+    {
+        box-shadow: 0 0 1vw transparent;
+    }
+    to
+    {
+        box-shadow: 0 0 1vw rgb(100, 100, 100);
+    }
+}
+
+/* The "glow down" animation when not hovering */
+@keyframes boxUnglow
+{
+    from
+    {
+        box-shadow: 0 0 1vw rgb(100, 100, 100);
+    }
+    to
+    {
+        box-shadow: 0 0 1vw transparent;
+    }
+}
+
+
+.eventName
+{
+    font-family: coolvetica;
+    font-size: 1.5vw;
+    color: #ffd11a;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+.eventInfoContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    margin-top: 0.5vh;
+}
+
+
+.eventArtistContainer
+{
+    width: 100%;
+    font-family: coolvetica;
+    font-size: 1.3vw;
+    color: #ff9500;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    height: 3vh;
+    justify-content: center;
+    margin-bottom: 0.5vh;
+}
+
+
+.eventArtist
+{
+    padding-right: 0.5vw;
+    white-space: nowrap;
+}
+
+
+.addArtist
+{
+    width: 0%;
+}
+
+
+.addArtistButton
+{
+    position: relative;
+    background: none;
+    border: none;
+    color: #ff9500;
+    font-size: 1.4vw;
+    top: -0.75vh;
+    left: -0.5vw;
+    text-shadow: 0 0 0.5vw transparent, 0 0 1vw transparent;
+    animation: symbolUnglow 0.3s ease-in-out;
+}
+
+
+.addArtistButton:hover
+{
+    animation: symbolGlow 0.1s ease-in-out;
+    text-shadow: 0 0 0.5vw #ff9500, 0 0 1vw #c07001;
+}
+
+
+/* The "glow up" animation when hovering */
+@keyframes symbolGlow
+{
+    from
+    {
+        text-shadow: 0 0 0.5vw transparent, 0 0 1vw transparent;
+    }
+    to
+    {
+        text-shadow: 0 0 0.5vw #ff9500, 0 0 1vw #c07001;
+    }
+}
+
+/* The "glow down" animation when not hovering */
+@keyframes symbolUnglow
+{
+    from
+    {
+        text-shadow: 0 0 0.5vw #ff9500, 0 0 1vw #c07001;
+    }
+    to
+    {
+        text-shadow: 0 0 0.5vw transparent, 0 0 1vw transparent;
+    }
+}
+
+
+.eventGenresContainer
+{
+    width: 100%;
+    font-family: coolvetica;
+    font-size: 1.2vw;
+    color: #ff9500;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+}
+
+
+.eventGenres
+{
+    text-align: center;
+    width: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    white-space: nowrap;
+}
+
+
+.eventLocation
+{
+    width: 100%;
+    font-family: coolvetica;
+    font-size: 1.2vw;
+    color: #ff9500;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+
+.eventLocationDetails
+{
+    width: 5%;
+    font-family: coolvetica;
+    font-size: 1.2vw;
+    color: #ff9500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.eventButtonContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+
+.eventPrice
+{
+    width: 100%;
+    font-family: coolvetica;
+    font-size: 1.2vw;
+    color: #ff9500;
+    text-align: center;
+}
+
+
+.discardEventButton
+{
+    background: none;
+    border: none;
+    font-family: coolvetica;
+    font-size: 0.9vw;
+    color: #ffd11a;
+    transition: font-size 0.2s;
+    text-shadow: 0 0 0.5vw transparent, 0 0 1vw transparent;
+    animation: symbolUnglow 0.3s ease-in-out;
+}
+
+.discardEventButton:hover
+{
+    font-size: 1vw;
+    text-shadow: 0 0 0.5vw #ff9500, 0 0 1vw #c07001;
+    animation: symbolGlow 0.1s ease-in-out;
+}

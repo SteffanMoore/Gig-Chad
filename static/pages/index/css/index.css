@@ -1,0 +1,310 @@
+
+.heroImage
+{
+    position: absolute;
+    top: -30vh;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/party-crowd.jpg");
+    background-size: 100%;
+}
+
+
+.heroOverlay
+{
+    height: 100%;
+    width: 100%;
+    /*background: rgb(38, 38, 38, 0.4);*/
+    background: radial-gradient(rgb(38, 38, 38, 0.3) 1%, rgb(38, 38, 38, 0.4) 70%);
+}
+
+
+.backgroundAngles > div
+{
+    position: absolute;
+    width: 75vw;
+    top:50vh;
+}
+
+
+.angles1
+{
+    background:  #b03030;
+    /*lighter shade of red #ff4d4d*/
+    /*#4d79ff#ffd24d*/
+    height: 50vh;
+}
+
+.angles2
+{
+    background: #972121;
+    height: 50vh;
+}
+
+.angles3
+{
+    background: #811818;
+    height: 60vh;
+}
+
+
+.leftLean1
+{
+    border-top-left-radius: 30% 75%;
+    transform: translateX(calc(0% - 7vw)) translateY(calc(-13vh + 10vh)) rotate(27deg);
+}
+
+.leftLean2
+{
+    border-top-left-radius: 20% 50%;
+    transform: translateX(calc(0% - 6vw)) skewX(-10deg) translateY(calc(-4vh + 10vh)) rotate(15deg);
+}
+
+.leftLean3
+{
+    border-top-left-radius: 15% 40%;
+    transform: translateX(calc(0% - 2vw)) skewX(-20deg) translateY(calc(2.5vh + 10vh)) rotate(5deg);
+}
+
+
+.rightLean1
+{
+    border-top-right-radius: 30% 75%;
+    transform: translateX(calc(25vw + 7vw)) translateY(calc(-13vh + 10vh)) rotate(-27deg);
+}
+
+.rightLean2
+{
+    border-top-right-radius: 20% 50%;
+    transform: translateX(calc(25vw + 6vw)) skewX(10deg) translateY(calc(-4vh + 10vh)) rotate(-15deg);
+}
+
+.rightLean3
+{
+    border-top-right-radius: 15% 40%;
+    transform: translateX(calc(25vw + 2vw)) skewX(20deg) translateY(calc(2.5vh + 10vh)) rotate(-5deg);
+}
+
+
+.menuContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+}
+
+
+.menuBackground
+{
+    position: absolute;
+    width: 70%;
+    height: 95%;
+    background: rgb(26, 26, 26, 0.9);
+    border-bottom-left-radius: 8vw;
+    border-bottom-right-radius: 8vw;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.2s;
+}
+
+
+.menuSwapper
+{
+    width: 200%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.menu
+{
+    /*background: red;*/
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 32vh;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+.menuTitle
+{
+    font-family: pop;
+    font-size: 4vw;
+    color: #ff9500;
+    text-align: center;
+    width: 100%;
+}
+
+
+.menuForm
+{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    padding-top: 2vh;
+}
+
+
+.textInput
+{
+    margin-top: 2vh;
+    margin-left: 30%;
+    width: 40%;
+    background: transparent;
+    font-family: coolvetica;
+    font-size: 2vw;
+    color: #ff9500;
+    text-align: center;
+    border: none;
+}
+
+.textInput:focus
+{
+    outline: none;
+}
+
+
+.submitButton
+{
+    margin-top: 2vh;
+    height: 5vh;
+    background: none;
+    font-family: coolvetica;
+    font-size: 2vw;
+    color: #ffd11a;
+    border: none;
+    transition: font-size 0.2s;
+}
+
+.submitButton:focus
+{
+    outline: none;
+}
+
+.submitButton:hover
+{
+    font-size:2.5vw;
+}
+
+
+.swapMenuButton
+{
+    background: transparent;
+    border: none;
+    font-family: coolvetica;
+    font-size: 1.5vw;
+    color: #ff9500;
+    transition: font-size 0.3s;
+}
+
+.swapMenuButton:hover
+{
+    font-size: 1.6vw;
+}
+
+
+.columnContainer
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+}
+
+
+.contentContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+}
+
+
+.mainTitle
+{
+    font-family: pop;
+    font-size: 10vw;
+    color: #ffd11a;
+    /*favourite colour: #ffd11a */
+    padding-top: 22vh;
+    transition-property: padding-top;
+    transition-duration: 0.5s;
+}
+
+
+#initialButtons
+{
+    transition-property: padding-top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+
+.initialButton
+{
+    width: 30vw;
+    height: 20vh;
+    font-family: pop;
+    font-size: 4vw;
+    color: #ffd11a;
+    background: transparent;
+    border: none;
+    margin: 25vh 5vw;
+    transition: font-size 0.5s;
+}
+
+
+.initialButton:hover
+{
+    font-size: 5vw;
+}
+
+
+.flashAlert
+{
+    height: 1vh;
+    width: 100%;
+    padding-top: 4.5vh;
+    text-align: center;
+    font-family: coolvetica;
+    font-size: 0vw;
+    color: #ff9500;
+    transition: font-size 0.3s;
+}
+
+
+.transitionCover
+{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    background: #811818;
+    width: 100vw;
+    height: 120vh;
+    border-top-left-radius: 8vw;
+    border-top-right-radius: 8vw;
+    transition-property: transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}

@@ -1,0 +1,15 @@
+
+@font-face
+{
+    font-family: pop;
+    font-weight: normal;
+    src: url("/static/fonts/60s Pop.otf");
+}
+
+
+@font-face
+{
+    font-family: coolvetica;
+    font-weight: normal;
+    src: url("/static/fonts/coolvetica rg.otf");
+}

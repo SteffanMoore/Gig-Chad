@@ -1,0 +1,42 @@
+{% extends "menu.html" %}
+
+{% block css %}
+<link href="static/pages/home/css/home.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="outerSections">
+    <div class="findGigsSection">
+        <div class="findGigsOverlay">
+            Find Gigs
+            <form class="selectPage leftPage" action="/home" method="post">
+                <button class="pageSelectButton" name="find gigs"></button>
+            </form>
+        </div>
+    </div>
+    <div class="preferencesSection">
+        <div class="preferencesOverlay">
+            Preferences
+            <form class="selectPage rightPage" action="/home" method="post">
+                <button class="pageSelectButton" name="preferences"></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="centralSection">
+    <div class="gigSectionContainer">
+        <div class="gigSection">
+            <div class="sectionOverlay">
+                Upcoming
+                <form class="selectPage centralPage" action="/home" method="post">
+                    <button class="pageSelectButton" name="upcoming"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

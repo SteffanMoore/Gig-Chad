@@ -1,0 +1,79 @@
+.menuContainer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.menu
+{
+    background: rgb(26, 26, 26);
+    width: 26vw;
+    height: 13vw;
+    border-bottom-left-radius: 13vw;
+    border-bottom-right-radius: 13vw;
+    pointer-events: all;
+    box-shadow: 0px 0px 1vw 1vw #811818;
+    transition: width 1s, height 1s;
+    pointer-events: all;
+}
+
+.appTitle
+{
+    width: 100%;
+    height: 1%;
+    padding-top: 2.5vh;
+    font-family: pop;
+    font-size: 4vw;
+    color: #ffd11a;
+    background: transparent;
+    border: none;
+    text-align: center;
+    transition: font-size 0.75s, transform 1s 0.3s;
+}
+
+.appTitle:hover
+{
+    font-size: 4.5vw;
+}
+
+.appTitle:focus
+{
+    outline: none;
+}
+
+.logoutButtonContainer
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logoutButton
+{
+    font-family: coolvetica;
+    font-size: 1.5vw;
+    color: #ff9500;
+    text-align: center;
+    margin-top: 5.5vw;
+    transition: font-size 0.5s, transform 1s;
+    background: none;
+    border: none;
+}
+
+.logoutButton:focus
+{
+    outline: none;
+}
+
+.logoutButton:hover
+{
+    font-size: 1.7vw;
+}

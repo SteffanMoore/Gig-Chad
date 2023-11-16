@@ -1,0 +1,70 @@
+
+<head>
+    <link href="static/shared/css/fonts.css" rel="stylesheet">
+    <link href="static/shared/css/page.css" rel="stylesheet">
+    <link href="static/pages/index/css/index.css" rel="stylesheet">
+</head>
+
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="index">
+        <div class="page">
+            <div class="heroImage">
+                <div class="heroOverlay"></div>
+            </div>
+            <div class="backgroundAngles">
+                <div class="angles1 leftLean1 backLeft1"></div>
+                <div class="angles1 rightLean1"></div>
+                <div class="angles2 leftLean2"></div>
+                <div class="angles2 rightLean2"></div>
+                <div class="angles3 leftLean3"></div>
+                <div class="angles3 rightLean3"></div>
+            </div>
+            <div class="menuContainer">
+                <div class="menuBackground">
+                    <div class="menuSwapper">
+                        <div class="menu loginMenu">
+                            <div class="menuTitle">Sign in</div>
+                            <form class="menuForm loginInfo" action="/" method="post">
+                                <input type="hidden" name="formName" value="loginInfo">
+                                <input type="text" name="username" placeholder="Username" class="textInput">
+                                <input type="password" name="password" placeholder="Password" class="textInput">
+                                <button type="submit" class="submitButton">Continue</button>
+                                <div class="flashAlert loginFlash"></div>
+                            </form>
+                            <button class="swapMenuButton" onclick="swapToRegister()">No account? Register here!</button>
+                        </div>
+                        <div class="menu registerMenu">
+                            <div class="menuTitle">Register</div>
+                            <form class="menuForm registerInfo" action="/" method="post">
+                                <input type="hidden" name="formName" value="registerInfo">
+                                <input type="text" name="username" placeholder="Username" class="textInput">
+                                <input type="password" name="password1" placeholder="Password" class="textInput">
+                                <input type="password" name="password2" placeholder="Re-enter" class="textInput">
+                                <button type="submit" class="submitButton">Continue</button>
+                                <div class="flashAlert registerFlash"></div>
+                            </form>
+                            <button class="swapMenuButton" onclick="swapToLogin()">Already have an account? Click here to log in!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columnContainer">
+                <div class="contentContainer">
+                    <div class="mainTitle">Gig Chad</div>
+                </div>
+                <div id="initialButtons" class="contentContainer">
+                    <button class="initialButton" onclick="openLoginMenu()">Sign in</button>
+                    <button class="initialButton" onclick="openRegisterMenu()">Register</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="/static/pages/index/javascript/initial_click.js"></script>
+        <script type="text/javascript" src="/static/pages/index/javascript/login_errors.js"></script>
+    </main>
+    <div class="transitionCover"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script type="text/javascript" src="/static/pages/index/javascript/index_transition.js"></script>
+</body>

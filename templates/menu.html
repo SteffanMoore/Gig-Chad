@@ -1,0 +1,23 @@
+<head>
+    <link href="static/shared/css/fonts.css" rel="stylesheet">
+    <link href="static/shared/css/page.css" rel="stylesheet">
+    <link href="static/shared/css/menu.css" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    <div class="page">
+        {% block main %}{% endblock %}
+        <div class="menuContainer">
+            <div class="menu">
+                <button class="appTitle" onclick="returnHome()">Gig Chad</button>
+                <div class="logoutButtonContainer">
+                    <button class="logoutButton" onclick="appLogout()">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/shared/javascript/logout_function.js"></script>
+    <script type="text/javascript" src="/static/shared/javascript/return_home.js"></script>
+    {% block scripts %}{% endblock %}
+</body>

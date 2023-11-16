@@ -1,0 +1,74 @@
+{% extends "menu.html" %}
+
+{% block css %}
+<link href="static/pages/preferences/css/preferences.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="background">
+    <div class="backgroundPhoto"></div>
+</div>
+<div class="backgroundFilter"></div>
+<div class="pageContentContainer">
+    <div class="preferencesTitle">Preferences</div>
+    <div class="preferenceContainer">
+        <form class="postcodeForm" action="/preferences" method="post">
+            <div class="itemTitle">Postcode</div>
+            <div class="postcodeInput">
+                <input type="hidden" name="formName" value="postcode">
+                <input type="text" name="postcode" placeholder="Postcode" class="textInput">
+                <button type="submit" class="submitPostcode">Update</button>
+            </div>
+            <div class="postcodeAlert">Invalid</div>
+        </form>
+        <div class="preferenceButtonContainer">
+            <button class="preferenceButton" onclick="showGenre()">My Genres</button>
+        </div>
+        <div class="preferenceButtonContainer">
+            <button class="preferenceButton" onclick="showFavourite()">Favourites</button>
+        </div>
+        <div class="preferenceButtonContainer">
+            <button class="preferenceButton" onclick="showHidden()">Hidden</button>
+        </div>
+    </div>
+    <div class="preferenceFormContainer">
+        <form class="preferenceFormBackground" id="genreFormBackground" action="/preferences" method="post">
+            <div class="formTitle">Genres</div>
+            <div class="scrollWindow">
+                <div class="scrollContent" id="genreForm">
+                    <input type="hidden" name="formName" value="genrePreferences">
+                </div>
+            </div>
+            <button type="submit" class="submitFormButton">Save</button>
+        </form>
+    </div>
+    <div class="preferenceFormContainer">
+        <form class="preferenceFormBackground" id="favouriteFormBackground" action="/preferences" method="post">
+            <div class="formTitle">Favourite Artists</div>
+            <div class="scrollWindow">
+                <div class="scrollContent" id="favArtistForm">
+                    <input type="hidden" name="formName" value="favArtistPreferences">
+                </div>
+            </div>
+            <button type="submit" class="submitFormButton">Save</button>
+        </form>
+    </div>
+    <div class="preferenceFormContainer">
+        <form class="preferenceFormBackground" id="hiddenFormBackground" action="/preferences" method="post">
+            <div class="formTitle">Hidden Artists</div>
+            <div class="scrollWindow">
+                <div class="scrollContent" id="hiddenForm">
+                    <input type="hidden" name="formName" value="hiddenArtistPreferences">
+                </div>
+            </div>
+            <button type="submit" class="submitFormButton">Save</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/pages/preferences/javascript/entrance_pop.js"></script>
+<script type="text/javascript" src="/static/pages/preferences/javascript/select_form.js"></script>
+<script type="text/javascript" src="/static/pages/preferences/javascript/postcode.js"></script>
+{% endblock %}

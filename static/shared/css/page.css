@@ -1,0 +1,16 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.page
+{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    /*background: radial-gradient(#69693e 1%, #1a1a00 70%);*/
+}
