@@ -13,6 +13,12 @@ The final update step is the city location retrieval which is a matter of conven
 After this, the update is complete, and the flask app runs.
 
 ## Index
+
+Log in             |
+:-------------------------:|
+<img src="/readme_pics/Login.gif" />  |
+
+
 The first page any new user would be welcomed with is the index page using the "/" route. This functions as both the login page and the registration page with any user who isn't logged in being rediected here (the log in system has been recycled from the "Finance" CS50 project). The initial two "register" and "sign in" buttons both trigger JavaScript functions on click to lower a div containing the two "sign in" and "register" forms. Only one of these forms is displayed at a time through the div but they can be swapped between using a button underneath each form which simply shifts displaces the form container left or right. All of the animation is handled by CSS transitions so that it changes made in JavaScript appear smooth.
 
 The login/registration forms themselves are quite simple - in the "/" route, handles both of them when the POST request method is used. A hidden input in each form is used to determine which form was posted and then the form is checked to ensure the correct details have been entered to sign up or log in. For log in, it's a case of attempting to retrieve the user's account information from the database and, if a discrepancy is found, blocking the log in. For registration, the database must first be checked for accounts using the same name as the user input before creating a new entry in the "users" table if none are found. For both forms, if an error in the form is detected, a 200 status code is returned with an error string (200 was chosen so that the page wouldn't reload). The post request is processed by a JavaScript function in "login_errors.js", which flashes an error message on the screen when a 200 response is received from the form submit. If nothing goes wrong, the log in process returns a 302 repsonse and the user is redirected to "/home".
