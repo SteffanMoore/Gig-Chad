@@ -26,11 +26,19 @@ The login/registration forms themselves are quite simple - in the "/" route, han
 ## Home
 The homepage is a very simple page which boils down to a banner menu at the top and three buttons underneath to redirect the user to their respective pages. The diagonal divide of the central button was achieved by superimposing it over the other two buttons and then using the CSS clip-path polygon technique. Each button has a dark filter overlay with letters cut out to display the title - on hover, the filter div fades away, making the button section appear brighter.
 
+Log out from home             |
+:-------------------------:|
+<img src="/readme_pics/Logout.gif" />  |
+
 #### The menu
 The menu at the top of the home page is present on all of the Gig Chad pages other than the index. The HTML of this is in the "menu.html" file which all of the pages featuring the menu extend. The two buttons on the menu merely redirect the user to other routes in "app.py" - the "Gig Chad" button takes the user to the home page (making it the key navigational button throughout the app) and the "Log Out" button simply redirects the user to the "/logout" route which clears the user session.
 
 ## Preferences
 The preferences page is the next page which the user will encounter (both the "upcoming" and "find gigs" pages redirect to preferences if the user doesn't have a preference entry in the database). On entry to the page, if the user doesn't have a preference entry in the database, a new one is created. Here the user can enter a postcode (so that events are relevant to their local area), select genres they want to see in the search results and remove artists from their favourites and hidden lists. On loading the page, the "entrance_pop.js" JavaScript script is run to add some animation.
+
+Accessing preferences from home             |
+:-------------------------:|
+<img src="/readme_pics/Preferences.gif" />  |
 
 #### Postcode update
 The update poscode section is a simple form submit which posts an input postcode to the "/preferences" route. Once recieved, the entered text is passed to an update function. This uses the aforementioned postcode API to check whether the entered postcode is valid - if it is, it updates the user preference in the database to the input postcode and returns true. If it isn't valid, it returns false. Depending on this return value, a status 200 response will be sent with either a "failure" message or the accepted postcode (which is then set as the placeholder for the text input). A div above the postcode title the flashes either "invalid" or "updated" depending on failure or success.
@@ -43,6 +51,10 @@ The final two options on the preferences page are very much similar to each othe
 
 ## Find gigs
 The find gigs page is used to display search results found as a result of the preferences entered by the user. Events can then be saved for future reference and artists can be saved as favourites or hidden if the user doesn't want to see them.
+
+Accessing find gigs from home             |
+:-------------------------:|
+<img src="/readme_pics/Find gigs.gif" />  |
 
 #### Initial search
 On loading the "find_gigs" page, the server immediately ensures that the user has a preference table entry. Once confirmed, the server fetches from the database all cities near to the user, as well as the whitelisted and blacklisted artists (referred to earlier as favourite and hidden) and the genre preferences of the user. A SQL search based on these criteria is then carried to return a list of events. This is then sorted into a dictionary, the key being the date and the value being a list of events taking place on that date (this had to be nested within another dictionary to prevent the loss of order so now looks more like dict = {index : {date : [list of events]}}).
@@ -57,3 +69,7 @@ Now that all of the events have been added to the page, the user can scroll thro
 
 ## Upcoming
 The "upcoming" page works near identically to the "find_gigs" page. On page load, events which are saved in a users preferences are searched for in the events table and returned from the database before being sorted in the same manner as the "find_gigs" page events. They are then displayed in the same way, albeit in a single column. The only additions are some extra event detail on the event card and a "Discard Event" button which removes the selected event from the users saved events.
+
+Accessing upcoming from home             |
+:-------------------------:|
+<img src="/readme_pics/Upcoming.gif" />  |
